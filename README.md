@@ -47,6 +47,8 @@ PEKS48はハードウェアとしては右も左も完全に同じものです�
 <img src="img/S__109133851_0.jpg" width="40%"><br>
 
 次に、トッププレートにスイッチをはめていきます。<br>
+本キーボードは打鍵感向上の為にすでにスイッチ用フォームが基板に貼ってあります。<br>
+Choc V2用のフォームではないですがこのまま挿して問題ないです。<br>
 この時点でキーキャップまではめてもよいです。<br>
 <img src="img/S__109133852_0.jpg" width="30%"><img src="img/S__109133854_0.jpg" width="30%"><img src="img/S__109133855_0.jpg" width="30%"><br>
 
@@ -58,11 +60,52 @@ PEKS48はハードウェアとしては右も左も完全に同じものです�
 
 最後に、ケース（トップ）を基板に被せて、開けた時のようにボトム側から6か所のネジを締めれば完成です。<br>
 この際、ナットが落ちないように横向きに回転させると作業しやすいと思います。<br>
+ケース裏面にゴム足を張る丸いマークがついています。ここに付属のゴム足をはると給電ドックとぴったりはまります。<br>
 <img src="img/S__109133862_0.jpg" width="30%"><img src="img/S__109133865_0.jpg" width="30%"><img src="img/S__109133866_0.jpg" width="30%"><img src="img/S__109133868_0.jpg" width="30%"><br>
 
 完成です！！<br>
 <img src="img/S__109060127_0.jpg" width="80%"><br>
 
+## 無線給電について
+キーボードの裏にはマグネットが付いています。<br>
+（下部3つのネジ穴の上にある少し大きい2つの丸がマグネットです）<br>
+<img src="img/S__109133868_0.jpg" width="30%"><br>
+無線給電したい際は、付属の無線給電ドッグのマグネットとキーボードのマグネットの位置を合わせると給電が始まります。<br>
+PEKS48の無線給電機能は付属の給電ドックのみに対応しています。同様に付属の給電ドックはPEKS48のみに対応しています。<br>
+対応しない機器での充電は避けてください。<br>
+<img src="img/S__109133876.jpg" width="30%"><br>
+
+## 電源スイッチ
+キーボード横に電源用スイッチがあります。（下記写真の左側の四角い穴）<br>
+キーボードに向かって奥側（下記写真の右方向）が「ON」（バッテリからの給電許可）です。<br>
+無線給電時はスイッチが「ON」でも「OFF」でも起動します。<br>
+バッテリに充電したいときは「ON」にしてから給電ドックもしくはUSBを接続して充電してください。
+<img src="img/S__109133877.jpg" width="30%"><br>
+
 ## 初期キー配置
-初期のキー配置は
+初期のキー配置は以下のようになっています。<br>
+(日本語キーボードとして使用しているのでkeymap Editor上では一部エラーとして表示されてしまいます)<br>
+詳細なキー配置は下記レポジトリのpeks48.keymapをご確認ください。<br>
+[https://github.com/PowerEnterKey/zmk-firmware-peks48<br>](https://github.com/PowerEnterKey/zmk-firmware-peks48/blob/main/boards/shields/peks48/peks48.keymap)
+<img src="img/keymap.png" width="60%"><br>
+
+PEKS48はKeymap Editorに対応しています。<br>
+キーマップを変更したい場合は、
+下記レポジトリをご自身のアカウントでフォークしてKeymap Editorにて変更をお願いします。<br>
+https://github.com/PowerEnterKey/zmk-firmware-peks48<br>
+ZMK StudioおよびKeymap Editorの詳しい使用方法につきましては、公開先のウェブサイトをご確認下さい。
+
+## Bluetoothが繋がらない場合
+PCとBluetoothで接続できない場合は再度ファームウェアの書き込みを行ってください。<br>
+右手用は下記の手順で実施します。<br>
+・PCとPEKS48をUSBで接続します。<br>
+・マイコン（XIAO BLE）のリセットボタンを2回連続で押すと、「XIAO SENSE」という名前でUSBドライブとして認識されます。<br>
+・本レポジトリ内にある「settings_reset-seeeduino_xiao_ble-zmk.uf2」を「XIAO SENSE」にドラック&ドロップします。<br>
+　書込みが完了すると「XIAO SENSE」ドライブは消えます。<br>
+・再度リセットボタンを2回連続で押して、本レポジトリ内の「peks48_r rgbled_adapter-seeeduino_xiao_ble-zmk.uf2」にドラック&ドロップします。<br>
+
+左手用は上記手順で最後に「peks48_l rgbled_adapter-seeeduino_xiao_ble-zmk.uf2」を書きます。<br>
+
+
+
 
