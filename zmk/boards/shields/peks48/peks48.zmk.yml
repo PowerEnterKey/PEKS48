@@ -1,8 +1,0 @@
-file_format: "1"
-id: peks48
-name: peks48
-type: shield
-url: https://github.com/PowerEnterKey/PEKS48/zmk
-requires: [seeeduino_xiao_ble]
-features:
-  - keys
