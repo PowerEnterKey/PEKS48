@@ -87,17 +87,20 @@ PEKS48の無線給電機能は付属の給電ドックのみに対応してい�
 初期のキー配置は以下のようになっています。<br>
 (日本語キーボードとして使用しているのでkeymap Editor上では一部エラーとして表示されてしまいます)<br>
 詳細なキー配置は下記レポジトリのpeks48.keymapをご確認ください。<br>
-[https://github.com/PowerEnterKey/zmk-firmware-peks48<br>](https://github.com/PowerEnterKey/zmk-firmware-peks48/blob/main/boards/shields/peks48/peks48.keymap)
-<img src="img/keymap.png" width="60%"><br>
+[https://github.com/PowerEnterKey/zmk-PEKS48<br>](https://github.com/PowerEnterKey/zmk-PEKS48/blob/main/boards/shields/peks48/peks48.keymap)
+<img src="img/keymap_PEKS48.png" width="60%"><br>
 
 PEKS48はKeymap Editorに対応しています。<br>
 キーマップを変更したい場合は、
 下記レポジトリをご自身のアカウントでフォークしてKeymap Editorにて変更をお願いします。<br>
-https://github.com/PowerEnterKey/zmk-firmware-peks48<br>
+https://github.com/PowerEnterKey/zmk-PEKS48<br>
 ZMK StudioおよびKeymap Editorの詳しい使用方法につきましては、公開先のウェブサイトをご確認下さい。
 
 ## Bluetoothが繋がらない場合
-PCとBluetoothで接続できない場合は再度ファームウェアの書き込みを行ってください。<br>
+PCとBluetoothのch選択が間違っている可能性があります。
+Layer3にてBluetoothのchを変更してみてください。
+
+それでもPCとBluetoothで接続できない場合は再度ファームウェアの書き込みを行ってください。<br>
 右手用は下記の手順で実施します。<br>
 ・PCとPEKS48をUSBで接続します。<br>
 ・マイコン（XIAO BLE）のリセットボタンを2回連続で押すと、「XIAO SENSE」という名前でUSBドライブとして認識されます。<br>
